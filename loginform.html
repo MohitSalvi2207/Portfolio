@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> registrnation form </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+
+        body {
+            background-image: linear-gradient(to top, #e6e8ef, #d11a66);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login {
+            width: 30%;
+            background-color: whitesmoke;
+            text-align: center;
+            border-radius: 1rem;
+        }
+
+        form {
+            padding: 20px 0px;
+            width: 70%;
+            margin: 0 auto;
+
+        }
+
+        form input {
+            padding: 0.8rem;
+            width: 100%;
+            display: block;
+            margin: 20px 0px;
+        }
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <div class="login">
+        <form id="myform">
+            <h1>login form</h1>
+            <input type="text" id="username" placeholder="Enter username">
+            <p id="required"></p>
+            <input type="email" id="email" placeholder="Enter email">
+            <input type="password" id="password" placeholder="Enter password">
+            <input type="password" id="conformpassword" placeholder="conformpassword">
+            <div class="g-recaptcha" data-sitekey="6LdSh84qAAAAAAQp3vuj-pXfYTZO7KuOmiUcXEnB"></div>
+            <br />
+            <input type="submit">
+        </form>
+        <p id="errormsg"></p>
+
+    </div>
+    <script>
+
+        let myform = document.getElementById("myform");
+        let username = document.querySelector("input[type='text']");
+        let email = document.querySelector("input[type='email']");
+        let password = document.querySelector("input[type='password']");
+        let conformpassword = document.getElementById("conformpassword");
+
+        myform.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            document.getElementById("errormsg").innerHTML = "";
+
+            if (username.value === "" || password.value === "") {
+                if (username.value === "" && password.value !== "") {
+                    console.log(" User Name is Reqired  ");
+                    document.getElementById("errormsg").innerHTML = "<b>  User Name is Reqired </b>";
+                    document.getElementById("errormsg").style.color = "red";
+                }
+                else if (username.value !== "" && password.value === "") {
+                    console.log(" password  is Reqired  ");
+                    document.getElementById("errormsg").innerHTML = "<b>  password  is Reqired </b>";
+                    document.getElementById("errormsg").style.color = "red";
+                }
+                else {
+                    console.log(" Both are Required  ");
+                    document.getElementById("errormsg").innerHTML = "<b>  Both are Required  </b>";
+                    document.getElementById("errormsg").style.color = "red";
+                }
+            }
+
+            //password validation 
+
+            if (password.value.length < 6) {
+                document.getElementById("errormsg").innerHTML = "<b> password should be  greterthen 6  </b>";
+                document.getElementById("errormsg").style.color = "red";
+            }
+
+            // else if(password.value !== '@' && password.value !== '$' && password.value !== '#' && password.value !== '_'){
+            //     document.getElementById("errormsg").innerHTML = "<b> please enter special () charechter  </b>"
+            //     document.getElementById("errormsg").style.color = "red";
+            // }
+
+            if (password.value !== conformpassword.value) {
+                document.getElementById("errormsg").innerHTML = "<b> password do not match </b>"
+                document.getElementById("errormsg").style.color = "red";
+            }
+
+            //email validation 
+
+            if (email.value === "") {
+                email.style.border = "2px solid red";
+                document.getElementById("errormsg").innerHTML = "<b> email are required </b>"
+                document.getElementById("errormsg").style.color = "red";
+            }
+
+            //contact validation
+
+
+        });
+
+        username.addEventListener("focus", () => {
+            username.style.backgroundColor = "red";
+            username.style.transform = "scale(1.2)";
+            username.style.transition = "1s";
+        });
+
+        username.addEventListener("blur", () => {
+            username.style.backgroundColor = "";
+            username.style.transform = "scale(1)";
+            username.style.transition = "1s";
+
+            if (username.value === "") {
+                username.style.border = "2px solid red";
+                document.getElementById("required").innerText = "required";
+                document.getElementById("required").style.color = " red";
+            }
+
+        });
+
+        password.addEventListener("focus", () => {
+            console.log()
+            password.style.backgroundColor = "red";
+            password.style.transform = "scale(1.2)";
+            password.style.transition = "1s";
+        });
+
+        password.addEventListener("blur", () => {
+            password.style.backgroundColor = "";
+            password.style.transform = "scale(1)";
+            password.style.transition = "1s";
+
+            if (password.value === "") {
+                password.style.border = "2px solid red";
+                password.getElementById("required").style.color = " red";
+            }
+
+        });
+
+        conformpassword.addEventListener("focus", () => {
+            conformpassword.style.backgroundColor = "red";
+            conformpassword.style.transform = "scale(1.2)";
+            conformpassword.style.transition = "1s";
+        });
+
+        conformpassword.addEventListener("blur", () => {
+            conformpassword.style.backgroundColor = "";
+            conformpassword.style.transform = "scale(1)";
+            conformpassword.style.transition = "1s";
+
+            if (conformpassword.value === "") {
+                conformpassword.style.border = "2px solid red";
+                conformpassword.getElementById("required").style.color = " red";
+            }
+
+        });
+
+
+    </script>
+</body>
+
+</html>
