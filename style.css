@@ -143,6 +143,36 @@ button:hover {
 
 /* project section start */
 
+.card-sec {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #1a1a1a; /* optional for dark background */
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* no shadow initially */
+}
+
+.card-sec:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  background-color: #2a2a2a; /* subtle hover background */
+  cursor: pointer;
+}
+
+.card-sec a button {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
+}
+
+.card-sec a button:hover {
+background-color: #007bff; 
+  color: white;
+  transform: scale(1.05); 
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
 .project-sec{
   /* height: 700px; */
   margin: 100px auto 50px;
