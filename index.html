@@ -1,321 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
 
-    <!-- bootstrap css file  -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
 
-    <!-- google fonts file -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&display=swap"
-      rel="stylesheet"
-    />
+  <!-- bootstrap css file  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- font awsome file -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- google fonts file -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap"
+    rel="stylesheet">
 
-    <!-- css file -->
-    <link href="style.css" rel="stylesheet" />
-  </head>
+  <!-- font awsome file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <!--  Navigation start -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand">Mohit Salvi</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#About"
-                >About
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#Skill"> Skills </a>
-            </li>
+  <!-- Owl Carousel CSS -->
+  <!-- In <head> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#Project">
-                Project
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#Contact"> Contact </a>
-            </li>
-          </ul>
-        </div>
+
+  <!-- css file -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--  Navigation start -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNavbar">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-5">
+        <h1> Mohit <br> Salvi </h1>
+      </a>
+      <a class="d-lg-none d-sm-block" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon" style="font-size: 1.5rem;"></span>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#Skill">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#Project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#Education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#Contact">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <!-- navigation end -->
+    </div>
+  </nav>
+  <!-- <button id="themeToggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </button> -->
 
-    <!-- main section  -->
-    <div class="container main-sec">
-      <div class="row align-items-center text-center text-lg-start">
-        <div class="col-lg-6 col-md-12 left-sec">
-          <h3>Hi, I am</h3>
-          <h1>Mohit Salvi</h1>
-          <h2>Front-end Developer</h2>
-          <a href="#Contact"
-            ><button class="btn-outline-dark text-white">HIRE ME</button></a
-          >
-          <a href="Mohit_CV.pdf" download
-            ><button class="btn-outline-dark text-white">GET CV</button></a
-          >
+  <div class="offcanvas">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#Education">Education</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+        
+  </div>
+  <!-- navigation end -->
+
+  <!-- main section  -->
+  <div class="container main-sec">
+    <div class="row align-items-center text-center text-lg-start">
+      <div class="col-lg-6 col-md-12 left-sec animate-left">
+        <h3>Hi, I am</h3>
+        <h1>Mohit Salvi</h1>
+        <h2><span id="typed-text"> Front-end Developer </span></h2>
+        <a href="#Contact"><button class="btn-outline-dark ">HIRE ME</button></a>
+        <a href="Mohit_CV.pdf" download><button class="btn-outline-dark ">GET CV</button></a>
+      </div>
+      <div class="col-lg-6 col-md-12 right-sec animate-right">
+        <img src="https://user-images.githubusercontent.com/75851313/151668395-5591532b-28da-46a6-9476-7c9694bcb60e.gif"
+          alt="Developer GIF" />
+      </div>
+    </div>
+  </div>
+  <!-- main section end -->
+  <!-- About section start -->
+  <div class="Aboutme animate-left" id="About">
+    <div class="container ">
+      <hr style="width: 100%; height: 3px; color: #b28cff;margin-bottom: 70px;">
+      <div class="row">
+        <div class="row-cols-lg-6 col-md-6 col-sm-12">
+          <h1 class="text-center">ABOUT ME</h1>
+          <img src="img2.png" />
         </div>
-        <div class="col-lg-6 col-md-12 right-sec">
-          <img
-            src="https://i.pinimg.com/originals/81/17/8b/81178b47a8598f0c81c4799f2cdd4057.gif"
-            alt="Developer GIF"
-          />
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <p id="about-text">
+          </p>
         </div>
       </div>
     </div>
-    <!-- main section end -->
-    <!-- About section start -->
-    <div class="Aboutme" id="About">
-      <div class="container">
-        <div class="row">
-          <div class="row-cols-lg-6 col-md-6 col-sm-12">
-            <h1 class="text-center">ABOUT ME</h1>
-            <img
-              src="https://cdn.pixabay.com/photo/2024/05/02/09/16/web-development-8734249_960_720.png"
-            />
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <p>
-              Hi, I’m Mohit, a passionate Front-End Developer dedicated to
-              crafting dynamic, responsive, and user-friendly web experiences.
-              With expertise in HTML, CSS, JavaScript, and modern frameworks
-              like React, I specialize in building visually appealing and highly
-              functional interfaces that enhance user engagement. I have a keen
-              eye for design and performance, ensuring that every website I
-              create is not only aesthetically pleasing but also optimized for
-              speed and usability. I thrive on learning new technologies,
-              solving challenges, and continuously improving my skills to stay
-              ahead in the fast-evolving world of web development. My goal is to
-              deliver intuitive, accessible, and high-performance web solutions
-              that elevate user experiences. Let’s build something amazing
-              together! 🚀
-            </p>
-          </div>
+  </div>
+  <!-- About section end -->
+
+  <!-- Skill section start -->
+  <div class="container">
+    <hr style="width: 100%; height: 3px; color: #b28cff;margin-bottom: 70px;">
+  </div>
+  <div class="skill-sec" id="Skill">
+    <h1 class="text-center">Skills</h1>
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/html.f884d301.svg" />
+          <h2>HTML</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/css.1beff86c.svg" />
+          <h2>CSS</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/javascript.3691c274.svg" />
+          <h2>JS</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/react.302a559b.svg" />
+          <h2>React JS</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/vscode.522c3864.svg" />
+          <h2>VS Code</h2>
+        </div>
+        <div class="slide"><img src="Redux.png" />
+          <h2>Redux</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/github.df940d40.svg" />
+          <h2>GitHub</h2>
+        </div>
+        <div class="slide"><img src="Bootstrap.png" />
+          <h2>Bootstrap</h2>
+        </div>
+
+        <!-- Duplicate for infinite effect -->
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/html.f884d301.svg" />
+          <h2>HTML</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/css.1beff86c.svg" />
+          <h2>CSS</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/javascript.3691c274.svg" />
+          <h2>JS</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/react.302a559b.svg" />
+          <h2>React JS</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/vscode.522c3864.svg" />
+          <h2>VS Code</h2>
+        </div>
+        <div class="slide"><img src="Redux.png" />
+          <h2>Redux</h2>
+        </div>
+        <div class="slide"><img src="https://erysmozo.vercel.app/assets/github.df940d40.svg" />
+          <h2>GitHub</h2>
+        </div>
+        <div class="slide"><img src="Bootstrap.png" />
+          <h2>Bootstrap</h2>
         </div>
       </div>
     </div>
-    <!-- About section end -->
+  </div>
 
-    <!-- Skill section start -->
-    <div class="skill-sec" id="Skill">
-      <h1 class="text-center">Skill</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-6 col-lg-3 col-md-4 logo">
-            <img src="https://erysmozo.vercel.app/assets/html.f884d301.svg" />
-            <h2>HTML</h2>
-          </div>
-          <div class="col-6 col-lg-3 col-md-4 logo">
-            <img src="https://erysmozo.vercel.app/assets/css.1beff86c.svg" />
-            <h2>CSS</h2>
-          </div>
-          <div class="col-6 col-lg-3 col-md-4 logo">
-            <img
-              src="https://erysmozo.vercel.app/assets/javascript.3691c274.svg"
-            />
-            <h2>JS</h2>
-          </div>
-          <div class="col-6 col-lg-3 col-md-4 logo">
-            <img src="https://erysmozo.vercel.app/assets/react.302a559b.svg" />
-            <h2>React JS</h2>
-          </div>
-          <div class="col-6 col-lg-3 col-md-4 logo">
-            <img src="https://erysmozo.vercel.app/assets/vscode.522c3864.svg" />
-            <h2>VS Code</h2>
-          </div>
-          <div class="col-6 col-lg-3 col-md-4 logo">
-            <img
-              src="Redux.png"
-            />
-            <h2>Redux</h2>
-          </div>
-          <div class="col-6 col-lg-3 col-md-4 logo">
-            <img
-              src="https://erysmozo.vercel.app/assets/github.df940d40.svg"
-              class="github-logo"
-            />
-            <h2>GitHub</h2>
-          </div>
-          <div class="col-6 col-lg-3 col-md-4 logo">
-            <img src="Bootstrap.png" />
-            <h2>Bootstrap</h2>
-          </div>
-        </div>
-      </div>
+  <!-- Skill section end -->
+
+  <!-- Project section start -->
+  <div class="project-sec" id="Project">
+    <div class="container">
+      <hr style="width: 100%; height: 3px; color: #b28cff;margin-bottom: 70px;">
     </div>
+    <div class="container">
+      <h1 class="section-title">Projects</h1>
+      <div class="row">
 
-    <!-- Skill section end -->
-
-    <!-- Project section start -->
-    <div class="project-sec" id="Project">
-      <div class="container">
-        <h1>PROJECT</h1>
-        <div class="row">
-          <div class="col-lg-4 card-sec col-sm-6 ">
-            <img src="Project1.png" class="mb-2" />
-            <h3 class="mt-3">ShopEase</h3>
+        <!-- Project 1 -->
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="project-card animate-up">
+            <img src="Project1.png" alt="ShopEase" />
+            <h3>ShopEase</h3>
             <p>
-              Developed a full-featured e-commerce app with CRUD,
-              authentication, and cart management. Integrated third-party APIs
-              for products and orders, ensuring a responsive UI with Bootstrap
-              and CSS. Added dynamic filtering, search, and real-time cart
-              updates for a seamless shopping experience.
+              Developed a full-featured e-commerce app with CRUD, authentication, and cart management. Integrated
+              third-party APIs, Bootstrap UI, and real-time updates for a seamless shopping experience.
             </p>
-            <a href="https://comfy-palmier-76ae74.netlify.app/">
-              <button class="btn-outline-dark text-light">View Site</button>
-            </a>
-            <a href="https://github.com/MohitSalvi2207/ShopEase.git">
-              <button class="btn-outline-dark text-light">View Code</button>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6 card-sec">
-            <img
-              src="project2.png"
-              class="mb-2"
-            />
-            <h3 class="mt-3">StreamView</h3>
-            <p>
-              Tech Stack: HTML, CSS, JavaScript, API Integration. Built a
-              responsive UI similar to YouTube, fetching and displaying videos
-              via API with dynamic search functionality and an interactive video
-              player featuring play, pause, and volume controls.
-            </p>
-            <a href="https://streamview-6nz0.onrender.com/">
-              <button class="btn-outline-dark text-light">View Site</button>
-            </a>
-            <a href="https://github.com/MohitSalvi2207/StreamView.git">
-              <button class="btn-outline-dark text-light">View Code</button>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6 card-sec">
-            <img src="project3.png" class="mb-2" />
-            <h3 class="mt-3">IntelliQuiz</h3>
-            <p>
-              IntelliQuiz is an interactive quiz web application designed to
-              test and enhance users' knowledge across various topics. It
-              features multiple-choice questions, instant feedback, and score
-              tracking to make learning engaging and effective. Built with a
-              user-friendly interface.
-            </p>
-            <!-- <a href="https://streamview-6nz0.onrender.com/">
-              <button class="btn-outline-dark text-light">View Site</button>
-            </a> -->
-            <a href="https://github.com/MohitSalvi2207/IntelliQuiz">
-              <button class="btn-outline-dark text-light">View Code</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- project section end  -->
-
-    <!-- Education Section start -->
-    <div class="education-sec" id="Education">
-      <div class="container">
-        <h1 class="text-center">Education and Training</h1>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12 edu-card">
-            <h3>Bachelor of Computer Application</h3>
-            <p>Gujrat Universicty | 2021 - 2023</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12 edu-card">
-            <h3>Master of Computer Applications (MCA)</h3>
-            <p>Dr. babasaheb ambedkar open university Sep 2024 - Present</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12 edu-card">
-            <h3>React Developer, Infolabz IT Services PVT. LTD.Ahmedabad</h3>
-            <p>Sept 2024 – Present</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Education section end -->
-
-    <!-- Contact Section start -->
-    <div class="container-fluid contact-sec" id="Contact">
-      <h1>Contact</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h3>- Get in Touch</h3>
-            <h2>Let's create progress together</h2>
-            <p>
-              For all inquiries, you can contact and message me on any of the
-              specified social media platforms below.
-            </p>
-
-            <div class="social-links">
-              <a
-                href="https://github.com/MohitSalvi2207"
-                class="fa-brands fa-github text-light"
-                aria-label="GitHub"
-              ></a>
-
-              <a
-                href="https://wa.me/+919974737469"
-                class="fa-brands fa-whatsapp text-light"
-                aria-label="whatsapp"
-              ></a>
-
-              <a
-                href="https://linkedin.com/in/salvimohit"
-                target="_blank"
-                class="fa-brands fa-linkedin text-light"
-                aria-label="LinkedIn"
-              ></a>
+            <div class="project-links">
+              <a href="https://comfy-palmier-76ae74.netlify.app/" target="_blank" class="btn btn-outline-dark">View
+                Site</a>
+              <a href="https://github.com/MohitSalvi2207/ShopEase.git" target="_blank" class="btn btn-outline-dark">View
+                Code</a>
             </div>
           </div>
-          <div class="col-lg-6 con-img">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkraoVhvshgmalsE_2CMwATYNFrJijoKV1zw&s"
-              alt="Contact Image"
-            />
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="project-card animate-up">
+            <img src="project2.png" alt="StreamView" />
+            <h3>StreamView</h3>
+            <p>
+              Built a responsive UI like YouTube using HTML, CSS, JavaScript, and APIs. Includes dynamic search, video
+              fetching, and a custom player with full controls.
+            </p>
+            <div class="project-links">
+              <a href="https://streamview-6nz0.onrender.com/" target="_blank" class="btn btn-outline-dark">View Site</a>
+              <a href="https://github.com/MohitSalvi2207/StreamView.git" target="_blank"
+                class="btn btn-outline-dark">View Code</a>
+            </div>
           </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="project-card animate-up">
+            <img src="project3.png" alt="IntelliQuiz" />
+            <h3>IntelliQuiz</h3>
+            <p>
+              IntelliQuiz is an interactive quiz web app with MCQs, score tracking, and instant feedback. Designed for
+              engaging learning with a clean interface.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/MohitSalvi2207/IntelliQuiz" target="_blank" class="btn btn-outline-dark">View
+                Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- project section end  -->
+
+  <!-- Education Section start -->
+  <section class="education-section" id="Education">
+    <div class="container">
+      <hr style="width: 100%; height: 3px; color: #b28cff;margin-bottom: 70px;">
+      <h2>Education and Training</h2>
+      <p class="subtitle">A brief overview of my academic journey.</p>
+
+      <div class="timeline-card">
+        <div class="timeline-icon"></div>
+        <div class="timeline-content">
+          <h4>Bachelor of Computer Application (BCA)</h4>
+          <p><i class="fa-solid fa-building-columns"></i> Gujarat University</p>
+          <p><i class="fa-solid fa-calendar-days"></i> Oct 2021 - Apr 2024</p>
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-icon"></div>
+        <div class="timeline-content">
+          <h4>Master of Computer Applications (MCA)</h4>
+          <p><i class="fa-solid fa-building-columns"></i> Dr. Babasaheb Ambedkar Open University</p>
+          <p><i class="fa-solid fa-calendar-days"></i> Sep 2024 - Present</p>
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-icon"></div>
+        <div class="timeline-content">
+          <h4>React Developer (Training)</h4>
+          <p><i class="fa-solid fa-building-columns"></i> Infolabz IT Services PVT. LTD. Ahmedabad</p>
+          <p><i class="fa-solid fa-calendar-days"></i> Sep 2024 - Present</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Contact Section end -->
+  <!-- Education section end -->
 
-    <!-- bootstrap js file  -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <!-- Contact Section Start -->
+  <section class="contact-section" id="Contact">
+    <div class="container">
+      <hr style="width: 100%; height: 3px; color: #b28cff;margin-bottom: 70px;">
+      <div class="row align-items-center">
+        <!-- Contact Details -->
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1 class="contact-heading">Let's Get in Touch</h1>
+          <div class="contact-buttons">
+            <a href="mailto:mohitsalvi227@gmail.com" class="contact-btn">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https:linkedin.com/in/salvimohit" target="_blank" class="contact-btn">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="https://github.com/MohitSalvi2207" target="_blank" class="contact-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://wa.me/9974737469" target="_blank" class="contact-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Illustration -->
+        <div class="col-lg-6 text-center">
+          <img src="img3.png" class="img-fluid contact-img" alt="Contact Illustration" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section End -->
+
+  <!-- Scroll Arror -->
+
+  <a href="#" class="back-to-top" id="backToTopBtn">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- End -->
+
+  <!-- bootstrap js file  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- end -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="/script.js"></script>
+
+  <!-- Before  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+
 </html>
