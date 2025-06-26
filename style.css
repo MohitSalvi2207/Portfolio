@@ -10,12 +10,12 @@ body {
   color: #212529;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 /* navigation start */
-nav{
+nav {
   background-color: #b28cff;
   height: 120px;
   font-size: 1.2rem;
@@ -41,13 +41,12 @@ nav ul {
 }
 
 .offcanvas {
-  width: 250px; 
-  background-color: #b28cff; 
-  color: white;
+  width: 250px;
+  background-color: #b28cff;
 }
 
 .offcanvas-header .btn-close {
-  filter: invert(1); 
+  filter: invert(1);
 }
 
 .offcanvas .links {
@@ -59,11 +58,14 @@ nav ul {
 .offcanvas .links li {
   margin: 15px 0;
   text-align: left;
+  border: 1px solid black;
+  border-radius: 2rem;
+  width: auto;
 }
 
 .offcanvas .links li a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 18px;
   font-weight: 500;
   transition: color 0.3s ease, padding-left 0.3s ease;
@@ -80,6 +82,74 @@ nav ul {
 
 .offcanvas-start {
   transition: transform 0.4s ease-in-out;
+}
+
+/* Animation Keyframes */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation on nav links */
+.navbar-nav .nav-link {
+  position: relative;
+  padding: 8px 12px;
+  margin: 0 8px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: fadeSlideIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Delay animation for each link */
+.navbar-nav .nav-item:nth-child(1) .nav-link {
+  animation-delay: 0.1s;
+}
+.navbar-nav .nav-item:nth-child(2) .nav-link {
+  animation-delay: 0.2s;
+}
+.navbar-nav .nav-item:nth-child(3) .nav-link {
+  animation-delay: 0.3s;
+}
+.navbar-nav .nav-item:nth-child(4) .nav-link {
+  animation-delay: 0.4s;
+}
+.navbar-nav .nav-item:nth-child(5) .nav-link {
+  animation-delay: 0.5s;
+}
+
+/* On hover effect */
+.navbar-nav .nav-link:hover {
+  color: #b28cff;
+  transform: translateY(-3px);
+}
+
+/* Active link underline animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #b28cff;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+.navbar-scrolled {
+  background-color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 
@@ -154,6 +224,7 @@ button:hover {
   text-align: center;
 }
 
+
 .skill-sec h1 {
   font-size: 36px;
   margin-bottom: 40px;
@@ -203,7 +274,6 @@ button:hover {
 /* skill section end */
 
 /* project section start */
-
 
 .project-sec {
   padding: 60px 20px;
@@ -448,7 +518,10 @@ button:hover {
 /* Light Dark mode */
 
 /* Base transition */
-body, .navbar, .project-card, .timeline-card {
+body,
+.navbar,
+.project-card,
+.timeline-card {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -653,7 +726,6 @@ body.dark-mode .timeline-card h4 {
   .Aboutme img {
     margin: 0 auto;
   }
-  
 }
 
 /* Medium devices (tablets, between 768px and 991px) */
