@@ -75,7 +75,7 @@ nav ul {
 }
 
 .offcanvas .links li a:hover {
-  background-color: #9d6efb;
+  /* background-color: #9d6efb; */
   padding-left: 25px;
   color: #fff;
 }

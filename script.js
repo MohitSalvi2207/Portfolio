@@ -97,3 +97,14 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("navbar-scrolled");
   }
 });
+
+
+//  Close offcanvas on link click 
+
+document.querySelectorAll('#offcanvasExample .offcanvas-body a').forEach(link => {
+    link.addEventListener('click', () => {
+      const offcanvasEl = document.getElementById('offcanvasExample');
+      const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+      bsOffcanvas.hide();
+    });
+  });
