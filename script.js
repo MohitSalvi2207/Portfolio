@@ -25,31 +25,31 @@ var typed = new Typed("#typed-text", {
   loop: true,
 });
 
-const text = `Hi, I’m Mohit, a passionate Front-End Developer dedicated to crafting dynamic, responsive, and user-friendly web experiences. With expertise in HTML, CSS, JavaScript, and modern frameworks like React, I specialize in building visually appealing and highly functional interfaces that enhance user engagement. I have a keen eye for design and performance, ensuring that every website I create is not only aesthetically pleasing but also optimized for speed and usability. I thrive on learning new technologies, solving challenges, and continuously improving my skills to stay ahead in the fast-evolving world of web development. My goal is to deliver intuitive, accessible, and high-performance web solutions that elevate user experiences. Let’s build something amazing together! 🚀`;
+  const text = `Hi, I’m Mohit, a passionate Front-End Developer dedicated to crafting dynamic, responsive, and user-friendly web experiences. With expertise in HTML, CSS, JavaScript, and modern frameworks like React, I specialize in building visually appealing and highly functional interfaces that enhance user engagement. I have a keen eye for design and performance, ensuring that every website I create is not only aesthetically pleasing but also optimized for speed and usability. I thrive on learning new technologies, solving challenges, and continuously improving my skills to stay ahead in the fast-evolving world of web development. My goal is to deliver intuitive, accessible, and high-performance web solutions that elevate user experiences. Let’s build something amazing together! 🚀`;
 
-let i = 0;
-const speed = 50; // typing speed in ms
+  let i = 0;
+  const speed = 50; // typing speed in ms
 
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("about-text").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("about-text").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
   }
-}
 
 // Start animation when in view (optional: start immediately)
-window.addEventListener("DOMContentLoaded", typeWriter);
+// window.addEventListener("DOMContentLoaded", typeWriter);
 
-// Scrolling effect for navigation links
-window.addEventListener("scroll", function () {
-  const navbar = document.getElementById("mainNavbar");
-  if (window.scrollY > 200) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
+// // Scrolling effect for navigation links
+// window.addEventListener("scroll", function () {
+//   const navbar = document.getElementById("mainNavbar");
+//   if (window.scrollY > 200) {
+//     navbar.classList.add("scrolled");
+//   } else {
+//     navbar.classList.remove("scrolled");
+//   }
+// });
 
 // ARROR Back to Top Button
 
@@ -108,3 +108,5 @@ document.querySelectorAll('#offcanvasExample .offcanvas-body a').forEach(link =>
       bsOffcanvas.hide();
     });
   });
+
+
